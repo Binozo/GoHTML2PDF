@@ -16,7 +16,7 @@ func ConvertHTMLToPDF(html string) ([]byte, error) {
 	if _, err := file.Write([]byte(html)); err != nil {
 		return nil, err
 	}
-	cmd := exec.Command(CHROME, "--headless", "--no-sandbox", "--disable-gpu", "--print-to-pdf-no-header", "--print-to-pdf=result.pdf", "file:///source.html")
+	cmd := exec.Command(CHROME, "--headless", "--no-sandbox", "--disable-gpu", "--no-margins", "--print-to-pdf-no-header", "--print-to-pdf=result.pdf", "file:///source.html")
 	_, err = cmd.Output()
 
 	if err != nil {
