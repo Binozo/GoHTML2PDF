@@ -1,7 +1,6 @@
 package chrome
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 )
@@ -17,7 +16,6 @@ func ConvertHTMLToPDF(html string) ([]byte, error) {
 	if _, err := file.Write([]byte(html)); err != nil {
 		return nil, err
 	}
-	fmt.Println("starting...")
 	cmd := exec.Command(CHROME, "--headless", "--no-sandbox", "--disable-gpu", "--print-to-pdf-no-header", "--print-to-pdf=result.pdf", "file:///source.html")
 	_, err = cmd.Output()
 
