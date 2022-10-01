@@ -21,4 +21,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ghcr.io/binozo/gohtml2pdf:latest
+          tags: binozoworks/gohtml2pdf:latest
