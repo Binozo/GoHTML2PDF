@@ -12,7 +12,7 @@ RUN mv endpoint /go/build/
 FROM alpine:3.14
 LABEL maintainer=binozoworks
 LABEL org.opencontainers.image.source="https://github.com/Binozo/GoHtml2PDF"
-LABEL org.opencontainers.image.description="An easy-to-deploy microservice which converts html to a pdf file using chromium "
+LABEL org.opencontainers.image.description="An easy-to-deploy microservice which converts html to a pdf file using chromium"
 
 COPY --from=builder /go/build/endpoint .
 
