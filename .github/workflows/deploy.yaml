@@ -5,7 +5,7 @@ on:
 
 jobs:
   Build-and-push-amd64:
-    name: Push Docker image
+    name: Build and push amd64
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -45,7 +45,7 @@ jobs:
           tags: ghcr.io/binozo/gohtml2pdf:latest
 
   Build-and-push-arm64:
-    name: Push Docker image
+    name: Build and push arm64
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
