@@ -16,5 +16,5 @@ docker run -d -p 7524:7524 --name gohtml2pdf binozoworks/gohtml2pdf:latest
 3. Convert your html to pdf:
 
 ```bash
-curl --location --request POST 'http://localhost:7524/convert' --form 'html="<h1>Hi</h1>"' --output mypdf.pdf
+curl --location --request POST 'http://localhost:7524/convert' --form 'html="<h1>Hello World!</h1>"' --output mypdf.pdf
 ```
